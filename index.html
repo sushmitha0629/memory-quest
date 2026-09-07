@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6d5dfc">
+    <title>Memory Quest — Brain Training Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+    <div class="ambient ambient-three"></div>
+
+    <main class="game-container">
+        <section id="startScreen" class="app-screen start-screen screen-active" aria-label="Start game">
+            <header class="game-header">
+                <div class="brand-row">
+                    <div class="game-icon" aria-hidden="true">🧠</div>
+                    <div class="brand-copy">
+                        <span class="eyebrow">BRAIN TRAINING</span>
+                        <h1>Memory Quest</h1>
+                    </div>
+                </div>
+
+                <p class="hero-subtitle">
+                    Focus. Remember. Master every level.
+                </p>
+                <p class="hero-description">
+                    Match colors with objects and challenge your memory one round at a time.
+                </p>
+            </header>
+
+            <div class="start-section">
+                <div class="feature-row">
+                    <div class="feature-pill"><span>⚡</span> Quick rounds</div>
+                    <div class="feature-pill"><span>🎯</span> 5 levels</div>
+                    <div class="feature-pill"><span>🏆</span> High score</div>
+                </div>
+
+                <p class="game-description">
+                    You'll see a set of colored cards. Memorize what each color contains,
+                    then answer the questions before you run out of lives.
+                </p>
+
+                <button id="startButton" class="start-button">
+                    <span class="button-icon">▶</span>
+                    <span>Start Playing</span>
+                    <span class="button-arrow">→</span>
+                </button>
+
+                <p class="keyboard-hint">Ready when you are ✨</p>
+            </div>
+
+            <footer class="game-footer">
+                <span>🧠</span>
+                <span>Stay calm</span>
+                <span class="footer-dot">•</span>
+                <span>Focus</span>
+                <span class="footer-dot">•</span>
+                <span>Remember</span>
+            </footer>
+        </section>
+
+        <section id="gameScreen" class="app-screen game-screen" aria-label="Game">
+            <section id="gameInfo" class="game-info" aria-label="Game status">
+                <div class="info-item">
+                    <span class="info-icon level-icon">🎯</span>
+                    <div>
+                        <small>LEVEL</small>
+                        <select id="levelDisplay" class="level-select" aria-label="Select level">
+    <option value="1">1</option>
+</select>
+                    </div>
+                </div>
+
+                <div class="info-divider"></div>
+
+                <div class="info-item">
+                    <span class="info-icon score-icon">⭐</span>
+                    <div>
+                        <small>SCORE</small>
+                        <strong id="scoreDisplay">0</strong>
+                    </div>
+                </div>
+
+                <div class="info-divider"></div>
+
+                <div class="info-item lives-item">
+                    <span class="info-icon">❤️</span>
+                    <div>
+                        <small>LIVES</small>
+                        <strong id="livesDisplay" aria-label="3 lives">❤️ ❤️ ❤️</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section id="gameArea" aria-live="polite"></section>
+
+            <footer class="game-footer">
+                <span>🧠</span>
+                <span>Stay calm</span>
+                <span class="footer-dot">•</span>
+                <span>Focus</span>
+                <span class="footer-dot">•</span>
+                <span>Remember</span>
+            </footer>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
